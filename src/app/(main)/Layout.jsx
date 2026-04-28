@@ -1,11 +1,14 @@
 import Navbar from '@/components/shared/Navbar';
-import React, { Children } from 'react';
+import Header from '@/components/shared/Header';
 
-const Mainlayout = () => {
+const Mainlayout = ({ children }) => {
     return (
-        <div>
+        <div className='space-y-10'>
+            <Header></Header>
             <Navbar></Navbar>
-            {Children}
+            <main>
+                {children}
+            </main>
         </div>
     );
 };
